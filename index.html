@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main class="card">
+      <section class="card__container--result">
+        <p class="card__text">Your Result</p>
+
+        <div class="card__group--average">
+          <span class="card__average">76</span>
+          <span class="card__denom">of 100</span>
+        </div>
+
+        <h1 class="card__feedback">Great</h1>
+        <p class="card__paragraph">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+
+      <section class="card__container--summary">
+        <h2 class="card__title">Summary</h2>
+
+        <div class="card__wrapper card__wrapper--reaction">
+          <img src="assets\images\icon-reaction.svg" alt="">
+          <h3 class="card__title--reaction">Reaction</h3>
+          <span class="card__item-score"
+            >80 <span class="--gray">/ 100</span></span
+          >
+        </div>
+
+        <div class="card__wrapper card__wrapper--memory">
+          <img src="assets\images\icon-memory.svg" alt="">
+          <h3 class="card__title--memory">Memory</h3>
+          <span class="card__item-score"
+            >92 <span class="--gray">/ 100</span></span
+          >
+        </div>
+
+        <div class="card__wrapper card__wrapper--verbal">
+          <img src="assets\images\icon-verbal.svg" alt="">
+          <h3 class="card__title--verbal">Verbal</h3>
+          <span class="card__item-score"
+            >61 <span class="--gray">/ 100</span></span
+          >
+        </div>
+
+        <div class="card__wrapper card__wrapper--visual">
+          <img src="assets\images\icon-visual.svg" alt="">
+          <h3 class="card__title--visual">Visual</h3>
+          <span class="card__item-score"
+            >72 <span class="--gray">/ 100</span></span
+          >
+        </div>
+
+        <button class="card__btn">Continue</button>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/AhmedDanjuma">AhmedDanjuma</a>.
+    </footer>
+  </body>
+</html>

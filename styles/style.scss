@@ -1,0 +1,221 @@
+@import "colors";
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin card__titles($color, $right: auto, $left: 0.4rem) {
+  color: $color;
+  margin-right: $right;
+  margin-left: $left;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $Pale-blue;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 500;
+}
+.card {
+  width: 300px;
+  height: 100%;
+  background-color: $White;
+
+  &__container--result {
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(
+      $Light-slate-blue_background,
+      $Light-royal-blue_background
+    );
+    color: $Light-lavender;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  &__group--average {
+    @include flex;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(
+      $Violet-blue_circle,
+      $Persian-blue_circle
+    );
+  }
+  &__average {
+    color: $White;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  &__denom {
+    color: rgba($White, 0.5);
+    font-weight: 700;
+  }
+
+  &__feedback {
+    color: $White;
+    padding: 20px;
+  }
+
+  &__container--summary {
+    margin: 20px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: $Dark-gray-blue;
+    font-weight: 700;
+  }
+  &__wrapper {
+    display: flex;
+    padding: 13px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font: 700;
+
+    img {
+      width: 17px;
+    }
+  }
+  &__item-score {
+    color: $Dark-gray-blue;
+    font-weight: 700;
+    font-size: 15px;
+    .--gray {
+      color: rgba($Dark-gray-blue, 0.5);
+    }
+  }
+
+  &__wrapper--reaction {
+    background-color: rgba($Light-red, 0.1);
+
+    .card__title--reaction {
+      @include card__titles($color: $Light-red);
+    }
+  }
+  &__wrapper--memory {
+    background-color: rgba($Orangey-yellow, 0.1);
+
+    .card__title--memory {
+      @include card__titles($color: $Orangey-yellow);
+    }
+  }
+  &__wrapper--verbal {
+    background-color: rgba($Green-teal, 0.1);
+
+    .card__title--verbal {
+      @include card__titles($color: $Green-teal);
+    }
+  }
+  &__wrapper--visual {
+    background-color: rgba($Cobalt-blue, 0.1);
+
+    .card__title--visual {
+      @include card__titles($color: $Cobalt-blue);
+    }
+  }
+
+  &__btn {
+    color: $White;
+    background-color: $Dark-gray-blue;
+    border: none;
+    padding: 1rem 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    border-radius: 5rem;
+    font-weight: 700;
+
+    &:hover {
+      background-image: linear-gradient(
+      $Light-slate-blue_background,
+      $Light-royal-blue_background
+    );
+    }
+
+    &:active {
+      background-color: $Light-royal-blue_background;
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  visibility: hidden;
+
+  a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: $White;
+    @include flex;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    box-shadow: 0 5px 25px hsl(241, 100%, 89%);
+    border-radius: 2rem;
+
+    &__container--result {
+      width: 55%;
+      border-radius: 2rem;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+    }
+
+    &__group--average {
+      width: 150px;
+      height: 150px;
+      gap: 0.5rem;
+    }
+    &__paragraph {
+      padding: 0 20px;
+    }
+
+    &__container--summary {
+      width: 50%;
+    }
+    &__average {
+      font-size: 4rem;
+    }
+    &__feedback {
+      font-size: 1.55rem;
+    }
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+  .attribution {
+    visibility: visible;
+  }
+}
