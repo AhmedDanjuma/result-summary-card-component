@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/result-summary-component-using-sass-flexbox-and-responsive-design-UgigxbPy0x)
 - Live Site URL: [Github](https://ahmeddanjuma.github.io/result-summary-card-component/)
 
 ## My process
